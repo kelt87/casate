@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Coppa delle Casate</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="candle" style="left:10%;top:20%"></div>
+
+<div class="candle" style="left:85%;top:30%"></div>
+
+<div class="candle" style="left:50%;top:10%"></div>
+
+<div id="background"></div>
+
+<header>
+
+<h1>🏆 COPPA DELLE CASATE 🏆</h1>
+
+<div id="topButtons">
+
+<button id="presentationBtn">
+👁 Modalità Presentazione
+</button>
+
+<button id="adminBtn">
+🔒 Pannello Admin
+</button>
+
+</div>
+
+<div id="adminPanel" class="hidden">
+
+<h2>🔒 Area Amministratore</h2>
+
+<input 
+id="pinInput"
+type="password"
+placeholder="Inserisci PIN">
+
+<button id="unlockBtn">
+Sblocca
+</button>
+
+<button id="lockBtn">
+Blocca controlli
+</button>
+
+<button id="resetBtn">
+Reset Coppa
+</button>
+
+</div>
+
+</header>
+
+<main>
+
+<section class="houses">
+
+<!-- Grifondoro -->
+<div class="house gryffindor">
+
+<div class="crest">
+
+<img id="crest-gryffindor" src="" alt="Stemma">
+
+<input
+type="file"
+accept="image/*"
+class="upload"
+data-house="gryffindor">
+
+</div>
+
+<h2 contenteditable="true">
+Grifondoro
+</h2>
+
+<div class="hourglass">
+
+<div class="glass">
+
+<div
+class="gems"
+id="gems-gryffindor">
+</div>
+
+</div>
+
+</div>
+
+<div class="score"
+id="score-gryffindor">
+0
+</div>
+
+<div class="controls">
+
+<button data-house="gryffindor" data-value="1">+1</button>
+
+<button data-house="gryffindor" data-value="5">+5</button>
+
+<button data-house="gryffindor" data-value="10">+10</button>
+
+<button data-house="gryffindor" data-value="-1">-1</button>
+
+<button data-house="gryffindor" data-value="-5">-5</button>
+
+</div>
+
+</div>
+
+<!-- Serpeverde -->
+
+<div class="house slytherin">
+
+<div class="crest">
+
+<img id="crest-slytherin" src="" alt="Stemma">
+
+<input
+type="file"
+accept="image/*"
+class="upload"
+data-house="slytherin">
+
+</div>
+
+<h2 contenteditable="true">
+Serpeverde
+</h2>
+
+<div class="hourglass">
+
+<div class="glass">
+
+<div
+class="gems"
+id="gems-slytherin">
+</div>
+
+</div>
+
+</div>
+
+<div class="score"
+id="score-slytherin">
+0
+</div>
+
+<div class="controls">
+
+<button data-house="slytherin" data-value="1">+1</button>
+
+<button data-house="slytherin" data-value="5">+5</button>
+
+<button data-house="slytherin" data-value="10">+10</button>
+
+<button data-house="slytherin" data-value="-1">-1</button>
+
+<button data-house="slytherin" data-value="-5">-5</button>
+
+</div>
+
+</div>
+
+<div id="cup">
+
+🏆
+
+</div>
+
+<!-- Corvonero -->
+
+<div class="house ravenclaw">
+
+<div class="crest">
+
+<img id="crest-ravenclaw" src="" alt="Stemma">
+
+<input
+type="file"
+accept="image/*"
+class="upload"
+data-house="ravenclaw">
+
+</div>
+
+<h2 contenteditable="true">
+Corvonero
+</h2>
+
+<div class="hourglass">
+
+<div class="glass">
+
+<div
+class="gems"
+id="gems-ravenclaw">
+</div>
+
+</div>
+
+</div>
+
+<div class="score"
+id="score-ravenclaw">
+0
+</div>
+
+<div class="controls">
+
+<button data-house="ravenclaw" data-value="1">+1</button>
+
+<button data-house="ravenclaw" data-value="5">+5</button>
+
+<button data-house="ravenclaw" data-value="10">+10</button>
+
+<button data-house="ravenclaw" data-value="-1">-1</button>
+
+<button data-house="ravenclaw" data-value="-5">-5</button>
+
+</div>
+
+</div>
+
+<!-- Tassorosso -->
+
+<div class="house hufflepuff">
+
+<div class="crest">
+
+<img id="crest-hufflepuff" src="" alt="Stemma">
+
+<input
+type="file"
+accept="image/*"
+class="upload"
+data-house="hufflepuff">
+
+</div>
+
+<h2 contenteditable="true">
+Tassorosso
+</h2>
+
+<div class="hourglass">
+
+<div class="glass">
+
+<div
+class="gems"
+id="gems-hufflepuff">
+</div>
+
+</div>
+
+</div>
+
+<div class="score"
+id="score-hufflepuff">
+0
+</div>
+
+<div class="controls">
+
+<button data-house="hufflepuff" data-value="1">+1</button>
+
+<button data-house="hufflepuff" data-value="5">+5</button>
+
+<button data-house="hufflepuff" data-value="10">+10</button>
+
+<button data-house="hufflepuff" data-value="-1">-1</button>
+
+<button data-house="hufflepuff" data-value="-5">-5</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="history">
+
+<h2>Cronologia</h2>
+
+<ul id="historyList"></ul>
+
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+	</html>
